@@ -1,0 +1,14 @@
+<div class="card mb-4" [ngClass]="{
+    'bg-warning': p.type == 'news',
+    'bg-info': p.type == 'education',
+    'bg-dark': p.type == 'politics',
+    'text-white': p.type == 'politics'
+  }">
+  <div class="card-header">{{p.id}} <span appHighL> POST</span></div>
+  <div class="card-body">
+    <h5 class="card-title">{{p.title | maiusc}}</h5>
+    <p class="card-text">{{p.body}}</p>
+    <ng-content></ng-content>
+    <button class="btn btn-sm btn-secondary ms-2" (click)="eliminaArticolo(p.id)">Delete</button>
+  </div>
+</div>

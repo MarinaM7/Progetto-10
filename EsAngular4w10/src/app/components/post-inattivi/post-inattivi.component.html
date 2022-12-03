@@ -1,0 +1,9 @@
+
+  <div class="container mt-5">
+    <div *ngFor="let postIn of posts">
+      <app-post-card [p]="postIn">
+        <button class="btn btn-success" (click)="attiva(postIn.id)">Attiva</button>
+        <button class="btn btn-sm btn-light ms-2" [routerLink]="['/post/inattivi',postIn.id]" routerLinkActive="r">Dettagli</button>
+      </app-post-card>
+    </div>
+  </div>

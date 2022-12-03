@@ -1,0 +1,9 @@
+<ng-container *ngIf="x">
+<div class="container mt-5">
+<h4 class="mb-4">Category: {{x.type}}</h4>
+<h2 class="mb-4">{{x.title | maiusc}}</h2>
+<p class="mb-4">{{x.body}}</p>
+<h4 class="mb-4" *ngIf="x.active"><i><small>Articolo attivo</small></i></h4>
+<h4 class="mb-4" *ngIf="!x.active"><i><small>Articolo non attivo</small></i></h4>
+</div>
+</ng-container>
